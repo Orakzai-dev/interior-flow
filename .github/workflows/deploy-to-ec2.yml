@@ -20,7 +20,7 @@ jobs:
 
     - name: Sync website to EC2 Tomcat
       run: |
-        ssh -o StrictHostKeyChecking=no ec2-user@<EC2_PUBLIC_IP> \
+        ssh -o StrictHostKeyChecking=no ec2-user@13.51.13.219 \
         "rm -rf /opt/tomcat/webapps/ROOT/*"
         
         scp -r * ec2-user@13.51.13.219:/opt/tomcat/webapps/ROOT/
